@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Spotify Playlists</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Your Playlists</h1>
+    {{range .}}
+    <div class="playlist">
+        <h2>{{.Name}}</h2>
+        <p>{{len .Tracks}} tracks</p>
+    </div>
+    {{end}}
+    <a href="/download" class="button">Download Backup</a>
+    <a href="/restore" class="button">Restore from Backup</a>
+</div>
+</body>
+</html>

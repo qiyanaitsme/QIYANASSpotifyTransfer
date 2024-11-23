@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restore Playlists 📥</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/progress.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="restore-card">
+        <h1>Import Your Playlists 🎵</h1>
+        <form id="restoreForm" action="/restore" method="post" enctype="multipart/form-data">
+            <div class="file-upload">
+                <label for="backup">Choose backup file 📁</label>
+                <input type="file" id="backup" name="backup" accept=".json" required>
+            </div>
+            <button type="submit" class="button">Start Import ✨</button>
+        </form>
+
+        <div id="progressContainer" class="progress-container" style="display: none;">
+            <h3 id="currentPlaylist"></h3>
+            <div class="progress-bar">
+                <div id="progressBar" class="progress"></div>
+            </div>
+            <p id="progressText">0%</p>
+            <p id="currentTrack"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

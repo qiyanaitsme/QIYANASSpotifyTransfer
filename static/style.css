@@ -1,0 +1,79 @@
+:root {
+    --spotify-green: #1DB954;
+    --dark-bg: #121212;
+    --card-bg: #282828;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--dark-bg);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.welcome-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.logo-section {
+    margin-bottom: 24px;
+}
+
+.spotify-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.login-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--spotify-green);
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 20px;
+}
